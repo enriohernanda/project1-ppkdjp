@@ -36,9 +36,13 @@
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.hero-section p{
+  font-size: 1.5rem;
 }
 
 .promo-section .card {
@@ -50,7 +54,7 @@
 
 .promo-section .card.premium {
   border: 3px solid #000;
-  scale: 1.05;
+  scale: 1.08;
 }
 
 .promo-section .card .price {
@@ -77,6 +81,36 @@
   color: #336dffff;
   font-weight: 700;
   font-size: 0.9rem;
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.label-terpopuler {
+  background-color: #282828;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 8px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 108%;
+  margin: 0 auto;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.card-wrapper .card {
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+  margin-top: 15px;
 }
 
 .virtual-section .card,
@@ -109,6 +143,8 @@
 
 .contact-section .kanan img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .footer{
@@ -152,60 +188,57 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .menu {
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .navbar-nav {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+
+  .me-170 {
+    margin-right: 0 !important;
+  }
+
   .hero-section {
-    padding: 8rem 1rem;
-    background-position: center;
+    padding: 8rem 2rem;
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero-section p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-}
-
-@media (max-width: 992px) {
-  .promo-section .col-md-3 {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .promo-section .card {
-    padding: 1.5rem;
+    font-size: 1.1rem;
   }
 
-  .promo-section .card h4 {
-    font-size: 1.2rem;
-  }
-
-  .promo-section .card .price {
-    font-size: 1.5rem;
-  }
-
-  .promo-section .card ul {
-    padding-left: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
+  .promo-section .col-md-3,
   .virtual-section .col-md-4,
   .office-section .col-md-4 {
     width: 100%;
     margin-bottom: 2rem;
   }
 
+  .promo-section .card,
   .virtual-section .card,
   .office-section .card {
     width: 100% !important;
   }
-}
 
-@media (max-width: 992px) {
   .contact-section .row {
     flex-direction: column;
   }
@@ -229,7 +262,28 @@
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile */
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 6rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .promo-section .card h4 {
+    font-size: 1.3rem;
+  }
+
+  .promo-section .card .price {
+    font-size: 1.4rem;
+  }
+
+  .promo-section .card ul {
+    padding-left: 1rem;
+  }
+
   .footer {
     text-align: center;
   }
@@ -239,6 +293,6 @@
   }
 
   .footer a {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
