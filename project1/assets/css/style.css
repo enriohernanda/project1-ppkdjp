@@ -12,6 +12,10 @@
     border-bottom: 4px solid black;
 }
 
+.navbar{
+  padding: 1rem 3rem;
+}
+
 .navbar-nav .nav-link{
     color: #555;
     font-weight: 500;
